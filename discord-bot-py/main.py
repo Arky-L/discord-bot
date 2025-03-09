@@ -2,6 +2,7 @@ from typing import Final
 import os
 from dotenv import load_dotenv
 from discord import Intents, Client, Message
+from discord.ext import commands
 from responses import get_response
 
 
@@ -13,7 +14,7 @@ TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
 # STEP 1: BOT SETUP
 intents: Intents = Intents.default()
 intents.message_content = True
-client: Client = Client(intents=intents)
+client: commands.Bot = commands.Bot(command_prefix="!", intents=intents) 
 
 # STEP 2: MESSAGE FUNCTIONALITY
 async def send_message(message: Message, user_message: str) -> None:
@@ -49,6 +50,14 @@ async def on_message(message: Message) -> None:
 
         print(f'[{channel}] {username}: "{user_message}"')
         await send_message(message, user_message)
+        await client.process_commands(message)
+
+# Close the bot
+@client.command()
+@commands.is_owner()
+async def shutdown(ctx):
+    await ctx.send("Shutting down... 🛑")
+    await client.close()
 
 
 # STEP 5: MAIN ENTRY POINT
