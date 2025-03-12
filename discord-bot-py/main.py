@@ -33,9 +33,9 @@ async def send_message(message: Message, user_message: str) -> None:
 # STEP 3: HANDLING STARTUP OF BOT
 @client.event
 async def on_ready() -> None:
-    # channel = client.get_channel(112057524093452288)  # CHANNEL ID HERE
-    # if channel:
-    #     await channel.send("Hello, I am online!")
+    channel = client.get_channel(112057524093452288)  # CHANNEL ID HERE
+    if channel:
+        await channel.send("Hello, I am online!")
     print(f'{client.user} is now running!')
 
 
