@@ -73,9 +73,10 @@ def get_response(user_input: str) -> str:
         "https://cdn.discordapp.com/attachments/112057524093452288/1349217854884675655/GlVRIeMXcAAvt7u.jpg?ex=67d24c8b&is=67d0fb0b&hm=dd2247e1063c0f40b3f2e67a5535c7383940e630212d1231280c05c52ad1ecd4&",
         "https://cdn.discordapp.com/attachments/112057524093452288/1349217855349981246/GlVTn9cWcAAwvjX.jpg?ex=67d24c8b&is=67d0fb0b&hm=ec19531bf570d73f440e3af4349b4a6c26a8b63e431612317e6bb2118a2b4c04&",
         "https://media.discordapp.net/attachments/112057524093452288/1349218005044690954/GlVTakCXwAAv0Hr.jpg?ex=67d24caf&is=67d0fb2f&hm=6c76b27c22b06339c9d6e035e279b1f8e028b394be11926ab1208b8beeec7747&=&format=webp&width=850&height=481",
+        "https://external-preview.redd.it/Kjrnh5sXM-wFtPaGph7zuCSFJpw2V1YSy-3gIj9adLI.gif?width=200&height=200&s=0e3bc2ce12335ae1214117b815b0b47894eab1be"
     ]
 
-    weights = [5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+    weights = [5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
 
     if lowered == "":
         return 'Ight good talk'
